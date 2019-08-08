@@ -62,7 +62,7 @@ admin_user: cloud-user
 # This will be added to each instance's authorized_keys file
 # ssh-keygen -t rsa
 # /ansibe-ocp-azure/id_rsa_azure
-admin_pubkey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDoLX4ySLuf2fJilic3vWXj3WOt/1GzAm46hDs7B2lXye5NEwlydPhNXpxBzkKyai27uvcS0q5FOSX3gFTHWjsD4yGw+hqaApguHGZKGEDbMYKaf98m6PEHXojHKOIcyyJ6si5zb8nnDxLdkybnwPGjiDfDBTn9nTRg5xdt/5LEOLmhPCQbgNqGYJZ2l/M6Elnc8Bf9jiclj/bp82kel8rIfCj63Z3blhes5S4CLKHtUp8xSuap4wgGlp5H254Y6vG3yHpleOTij5iYddGvd90N+puNszkViecaHQOSDIfazrbug1qPe3r4ish9QHlWz3zCYvM/kPqRvmsJx9LmgJev vagrant@rhel7-cloud'
+admin_pubkey: ''
 # Path for the private key which will be added to localhost ssh_config for proxying through the bastion
 admin_privkey: 'id_rsa'
 
@@ -75,26 +75,26 @@ admin_privkey: 'id_rsa'
 # Service Principal
 #######################
 # This is used to template the cloud config file on each node for azure
-sp_name: openshift311_app
+sp_name: <sp name here>
 # Place this in vars file that can be encrypted in root of play and not checked into SCM
-sp_secret: '567d6c5c-d6d8-410c-9149-b8582ace7854'
-sp_app_id: 'e6039355-d3c4-4039-a43c-2e6633872b84'
+sp_secret: ''
+sp_app_id: ''
 
 #######################
 # RHSM
 # Username / Password or
 # Activation key / OrgId
 #######################
-rhsm_user: 'niruban.kandasamy@cra-arc.gc.ca'
-rhsm_pass: 'BlackCat@Work!'
-registry_service_account_user: '12454151|nirubank'
-registry_service_account_token: 'eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiI5YjUzZDgwZWRmYmI0MWExYWVmNTA1YTk5YjgwYzNmMiJ9.NMQHRJOPh2y0IsbH8wbAwyX5YR7tk9JwzRcdMJwxb_jpbhyB_bRq7XZ_1Kt7m85S7ZNU2Zul--ysztUXIzuIr2p0m-oc25SeTfjMWiU0w6V7DhRa6ePe8_1Vs84mq9RacRdumqM17Dp0Is5ckuFBtZc6aeNmcXBke1smfPrz3BsuuOGS0sOI7-SZbB-CAnc9q_AkiKXTTLnOiHy1BIaHx79xvKlRQ26rSyKL_25dK5NMRz7ea0fSjqhPF67KB88QpkUIuErhbUjujGHLA4IzAK2D3kmdyJ3L2Jj2HggH0SVwLH2LwFDFQ6rF1uwcSykT6KMpYl2mhtRy9n5pqGh5wHpgYuGD4v-DMstUF7MocPZe7ZMby5o_X3VnH3aFmQtr9nMKvcXqIGy9F_NCNtBUzEO1kr1vSWwHeHArWYwozfrVuGPPPqTb51YQLIsW_TiZeByncSjMWjyQdwSMddbmsuxM9GyzoQ62Pi2s1k8ytqGaIS-4iyKuZ2edmp6YdANylohDHLX7FhnqAYpSa1__p1hYLBPptcweUGf510B1u7URGVykZrJbOkivIyn0uZPQxDvc8UZStAUrOksAuYrmJcuEslvool4Pk_XokM_U4LEAZtkFyo_ax6i1HjApQk4k6QNvi9Bq2gfbTeQksWRqMqNLXbIKm3WJplbhkDn_U04'
+rhsm_user: ''
+rhsm_pass: ''
+registry_service_account_user: ''
+registry_service_account_token: ''
 #rhsm_key: ""
 #rhsm_org: ""
 # Can specify separate pools so only Application nodes use paid subs
 # or keep the same if only using one pool
-rhsm_broker_pool: "8a85f9996c535260016c6c9341bf2e4a"
-rhsm_node_pool: "8a85f99a6c60f3f7016c6c91cd0171fc"
+rhsm_broker_pool: ""
+rhsm_node_pool: ""
 # For openshift contakiner Storage
 rhsm_ocs_pool: ""
 rhsm_repos:
